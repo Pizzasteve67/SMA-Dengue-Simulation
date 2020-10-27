@@ -1,12 +1,12 @@
 # SMA-Dengue-Simulation
 
-Simulation Project For SMA Mod
-Members: Hui Ting, Jun Hao, Eugene, Keenan
+Simulation Project For SMA Mod <br/>
+Members: Hui Ting, Jun Hao, Eugene, Keenan <br/>
 
-This repo is for the SMA mod
-We are building an agent based simulation model using javascript to simulate the transmission of the dengue virus
+This repo is for the SMA mod <br/>
+We are building an agent based simulation model using javascript to simulate the transmission of the dengue virus <br/>
 
-Project Development will be split into at most 5 phases
+Project Development will be split into at most 5 phases <br/>
 
 Phase 1:
 -Building and People <br/>

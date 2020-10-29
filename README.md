@@ -8,22 +8,22 @@ We are building an agent based simulation model using javascript to simulate the
 
 Project Development will be split into at most 5 phases <br/>
 
-Phase 1:
+Phase 1:<br/>
 -Building and People <br/>
 -Mosquito population <br/>
 -Increase number of people in system <br/>
 
-Phase 2:
+Phase 2:<br/>
 -Mosquito Transmission of disease to ppl <br/>
 -Mosquito reproduction at water source <br/>
 -Disease recovery <br/>
 -Traps to curb mosquito growth <br/>
 
-Phase 3:
+Phase 3:<br/>
 -Random Water source/traps appearing and disappearing in response to a slider <br/>
 -Sliders to control traps/water sources/human density in system <br/>
 -Make mosquitoes more likely move within each zone rather than cross zones <br/>
 
-Phase 4:
+Phase 4:<br/>
 -People entering or leaving the system <br/>
 -Output graphs to see the outcome of our model <br/>

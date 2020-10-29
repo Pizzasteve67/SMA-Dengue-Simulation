@@ -22,6 +22,7 @@ Phase 2:
 Phase 3:
 -Random Water source/traps appearing and disappearing in response to a slider <br/>
 -Sliders to control traps/water sources/human density in system <br/>
+-Make mosquitoes more likely move within each zone rather than cross zones <br/>
 
 Phase 4:
 -People entering or leaving the system <br/>

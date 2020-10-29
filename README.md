@@ -27,3 +27,4 @@ Phase 3:<br/>
 Phase 4:<br/>
 -People entering or leaving the system <br/>
 -Output graphs to see the outcome of our model <br/>
+-Fumigation <br/>

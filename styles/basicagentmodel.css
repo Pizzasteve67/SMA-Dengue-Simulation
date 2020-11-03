@@ -39,17 +39,70 @@
 /* Font downloaded from FontsForWeb.com */
 
 /* Set default font to be 616. Use 'thegirlnextdoor' for tooltips and suggestions.*/
-.official{font-family:'616';}
+.official{
+	font-family:'616';
+	padding: 10px;
+}
 .unofficial{font-family:'thegirlnextdoor';}
 
 .placeholder-box {
   position: absolute;
-	background-color: #D3D3D3;
+	/*background-color: #D3D3D3;*/
 	top:10%;
 	left:47%;
-	width:220px;
-  height: 300px;
+	width:47%;
+  height: 100%;
   padding: 20px;
   /*border: 2px solid #000;*/
+}
 
+#surface {
+	padding: 50px 10px 10px 10px;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+	right:10px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+	font-weight: bold;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+	height: 100%;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tabcontent li {
+	padding:5px;
+}
+.sidebar {
+	right: 10px;
 }

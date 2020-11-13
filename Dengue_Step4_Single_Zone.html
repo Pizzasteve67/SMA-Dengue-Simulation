@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Dengue Agent Model SINGLE ZONE</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+		<!-- d3 is for data visualization -->
+		<script type="text/javascript" src="lib/d3.min.js"></script>
+
+		<!-- inspectElement is useful for debugging javascript objects -->
+		<script type="text/javascript" src="lib/inspectElement.js"></script>
+
+		<!-- custom styles for this application -->
+		<link rel="stylesheet" href="styles/basicagentmodel.css" media="screen">
+
+</head>
+<!-- Set class to official for more formal font; unofficial for informal font -->
+<body class="official bgColor0">
+		<!-- The surface is the main playing field for the game -->
+
+		<svg  id="surface" style="width:50% height:100% x:0" xmlns="http://www.w3.org/2000/svg" version="1.1" onclick="toggleSimStep();">
+		</svg>
+
+		<div id="title" style="position:absolute;bottom:0">Dengue Agent-Based Model</div>
+		<!--
+		<div id="controls" style="position:absolute;bottom:0;left:35%">Animation Speed:
+		<input id="slider1" type="range" min="0" value:"275" max="500" step="10" onchange="redrawWindow();" />
+		</div>
+		-->
+
+	<p style="position:absolute;top:2.5%;left:50%; font-size:18px">Simulation Parameters</p>
+	<div class = "sidebar">
+		<div class = "placeholder-box">
+			<!-- Tab Bar -->
+			<div class="tab">
+				<button class="tablinks" onclick="openTab(event, 'Overall')">Overall</button>
+				<button class="tablinks" onclick="openTab(event, 'Zone1')">Zone 1</button>
+				<button class="tablinks" onclick="openTab(event, 'Zone2')">Zone 2</button>
+				<button class="tablinks" onclick="openTab(event, 'Zone3')">Zone 3</button>
+				<button class="tablinks" onclick="openTab(event, 'Zone4')">Zone 4</button>
+			</div>
+			<!-- Overall Tab -->
+			<div id="Overall" class="tabcontent">
+				<ol>
+					<li>
+						<a style="position:absolute">Simulation Speed </a><br>
+						<a><input id="slideroverall1" type="range" min="0" value="300" max="5000" step="10" onchange="redrawWindow();" style="position:absolute"/></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Probability of Recover </a><br>
+						<a><input id="slideroverall2" type="range" min="0" value="0.7" max="1" step="0.05" onchange="redrawWindow();" style="position:absolute" /></a>
+						</li>
+				</ol>
+			</div>
+			<!-- Zone1 Tab -->
+			<div id="Zone1" class="tabcontent">
+				<ol>
+					<li>
+						<a style="position:absolute">Human Density </a><br>
+						<a><input id="slider1a" type="range" min="0" value=humanDensityZone1 max="1" step=".1" onchange="redrawWindow();" style="position:absolute"/></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Biting Rate </a><br>
+						<a><input id="slider1b" type="range" min="0" value=BitingRate1 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Trap Density </a><br>
+						<a><input id="slider1c" type="range" min="0" value=trapDensityZone1 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Trap Rate </a><br>
+						<a><input id="slider1d" type="range" min="0" value=TrapRate1 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Water Source Density </a><br>
+						<a><input id="slider1e" type="range" min="0" value=waterDensityZone1 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Spawn Rate </a><br>
+						<a><input id="slider1f" type="range" min="0" value=SpawnRate1 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+				</ol>
+			</div>
+			<!-- Zone2 Tab -->
+			<div id="Zone2" class="tabcontent">
+				<ol>
+					<li>
+						<a style="position:absolute">Human Density </a><br>
+						<a><input id="slider2a" type="range" min="0" value=humanDensityZone2 max="1" step=".1" onchange="redrawWindow();" style="position:absolute"/></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Biting Rate </a><br>
+						<a><input id="slider2b" type="range" min="0" value=BitingRate2 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Trap Density </a><br>
+						<a><input id="slider2c" type="range" min="0" value=trapDensityZone2 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Trap Rate </a><br>
+						<a><input id="slider2d" type="range" min="0" value=TrapRate2 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Water Source Density </a><br>
+						<a><input id="slider2e" type="range" min="0" value=waterDensityZone2 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Spawn Rate </a><br>
+						<a><input id="slider2f" type="range" min="0" value=SpawnRate2 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+				</ol>
+			</div>
+			<!-- Zone3 Tab -->
+			<div id="Zone3" class="tabcontent">
+				<ol>
+					<li>
+						<a style="position:absolute">Human Density </a><br>
+						<a><input id="slider3a" type="range" min="0" value=humanDensityZone3 max="1" step=".1" onchange="redrawWindow();" style="position:absolute"/></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Biting Rate </a><br>
+						<a><input id="slider3b" type="range" min="0" value=BitingRate3 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Trap Density </a><br>
+						<a><input id="slider3c" type="range" min="0" value=trapDensityZone3 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Trap Rate </a><br>
+						<a><input id="slider3d" type="range" min="0" value=TrapRate3 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Water Source Density </a><br>
+						<a><input id="slider3e" type="range" min="0" value=waterDensityZone3 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Spawn Rate </a><br>
+						<a><input id="slider3f" type="range" min="0" value=SpawnRate3 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+				</div>
+			<!-- Zone4 Tab -->
+			<div id="Zone4" class="tabcontent">
+				<ol>
+					<li>
+						<a style="position:absolute">Human Density </a><br>
+						<a><input id="slider4a" type="range" min="0" value=humanDensityZone4 max="1" step=".1" onchange="redrawWindow();" style="position:absolute"/></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Biting Rate </a><br>
+						<a><input id="slider4b" type="range" min="0" value=BitingRate4 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Trap Density </a><br>
+						<a><input id="slider4c" type="range" min="0" value=trapDensityZone4 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Trap Rate </a><br>
+						<a><input id="slider4d" type="range" min="0" value=TrapRate4 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Water Source Density </a><br>
+						<a><input id="slider4e" type="range" min="0" value=waterDensityZone4 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+					<li>
+						<a style="position:absolute">Spawn Rate </a><br>
+						<a><input id="slider4f" type="range" min="0" value=SpawnRate4 max="1" step=".1" onchange="redrawWindow();" style="position:absolute" /></a>
+					</li><br>
+				</div>
+		</div>
+	</div>
+
+
+	<!--<p style="position:absolute;top:2.5%;left:80%; font-size:18px">Graphs</p>-->
+
+
+	<a id="credits" href="https://www.flaticon.com/" style="position:absolute;bottom:0;right:0">Icons by flaticon.com</a>
+
+
+
+	<!-- Anything below this line should be a popup window or dialog or a late-loading library -->
+
+	<script type="text/javascript" src="lib/Dengue_Step4_Single_Zone.js"></script>
+
+</body>
+</html>

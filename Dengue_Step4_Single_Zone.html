@@ -33,42 +33,44 @@
 	<div class = "sidebar">
 		<div class = "placeholder-box">
 			<!-- Tab Bar -->
+			<!--
 			<div class="tab">
 				<button class="tablinks" onclick="openTab(event, 'Overall')">Overall</button>
 			</div>
+			-->
 			<!-- Overall Tab -->
-			<div id="Overall" class="tabcontent">
+			<!--<div id="Overall" class="tabcontent">-->
 				<ol>
 					<li>
-						<a style="position:absolute">Simulation Speed </a><br>
-						<a><input id="slideroverall1" type="range" min="0" value="300" max="5000" step="10" onchange="redrawWindow();" style="position:absolute"/></a>
+						<a style="position:absolute">Simulation Speed: <span id="simspeed_val"></span></a><br>
+						<a><input id="simspeed" type="range" min="0" value="300" max="5000" step="10" onchange="redrawWindow();" style="position:absolute"/></a>
 					</li><br>
 					<li>
-						<a style="position:absolute">Human Density </a><br>
-						<a><input id="slider1a" type="range" min="0" value=humanDensity max="1" step=".05" onchange="redrawWindow();" style="position:absolute"/></a>
+						<a style="position:absolute">Human Density: <span id="humandensity_val"></span></a><br>
+						<a><input id="humandensity" type="range" min="0" value=humanDensity max="1" step=".01" onchange="redrawWindow();" style="position:absolute"/></a>
 					</li><br>
 					<li>
-						<a style="position:absolute">Biting Rate </a><br>
-						<a><input id="slider1b" type="range" min="0" value=BitingRate max="1" step=".05" onchange="redrawWindow();" style="position:absolute" /></a>
+						<a style="position:absolute">Biting Rate: <span id="bitingrate_val"></span></a><br>
+						<a><input id="bitingrate" type="range" min="0" value=BitingRate max="1" step=".01" onchange="redrawWindow();" style="position:absolute" /></a>
 					</li><br>
 					<li>
-						<a style="position:absolute">Trap Density </a><br>
-						<a><input id="slider1c" type="range" min="0" value=trapDensity max="1" step=".05" onchange="redrawWindow();" style="position:absolute" /></a>
+						<a style="position:absolute">Trap Density: <span id="trapdensity_val"></span></a><br>
+						<a><input id="trapdensity" type="range" min="0" value=trapDensity max="1" step=".01" onchange="redrawWindow();" style="position:absolute" /></a>
 					</li><br>
 					<li>
-						<a style="position:absolute">Trap Rate </a><br>
-						<a><input id="slider1d" type="range" min="0" value=TrapRate max="1" step=".05" onchange="redrawWindow();" style="position:absolute" /></a>
+						<a style="position:absolute">Trap Rate: <span id="traprate_val"></span></a><br>
+						<a><input id="traprate" type="range" min="0" value=TrapRate max="1" step=".01" onchange="redrawWindow();" style="position:absolute" /></a>
 					</li><br>
 					<li>
-						<a style="position:absolute">Water Source Density </a><br>
-						<a><input id="slider1e" type="range" min="0" value=waterDensity max="1" step=".05" onchange="redrawWindow();" style="position:absolute" /></a>
+						<a style="position:absolute">Water Source Density: <span id="waterdensity_val"></span></a><br>
+						<a><input id="waterdensity" type="range" min="0" value=waterDensity max="1" step=".01" onchange="redrawWindow();" style="position:absolute" /></a>
 					</li><br>
 					<li>
-						<a style="position:absolute">Spawn Rate </a><br>
-						<a><input id="slider1f" type="range" min="0" value=SpawnRate max="1" step=".05" onchange="redrawWindow();" style="position:absolute" /></a>
+						<a style="position:absolute">Spawn Rate: <span id="spawnrate_val"></span></a><br>
+						<a><input id="spawnrate" type="range" min="0" value=SpawnRate max="1" step=".01" onchange="redrawWindow();" style="position:absolute" /></a>
 					</li><br>
 				</ol>
-			</div>
+			<!--</div>-->
 
 		</div>
 	</div>

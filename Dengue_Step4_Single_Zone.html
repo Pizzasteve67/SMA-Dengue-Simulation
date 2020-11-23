@@ -13,6 +13,7 @@
 
 		<!-- plotly is for drawing graphs -->
 		<script type="text/javascript" src="lib/plotly.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 		<!-- custom styles for this application -->
 		<link rel="stylesheet" href="styles/basicagentmodel.css" media="screen">
@@ -73,6 +74,21 @@
 						<a><input id="spawnrate" type="range" min="0" value=SpawnRate max="1" step=".01" onchange="redrawWindow();" style="position:absolute" /></a>
 					</li><br>
 				</ol>
+
+				<br/><br/><br/>
+				<div>
+						<a style="position:absolute">Cumulative Total Dengue Cases: <span id="stats_0"></span></a><br>
+						<a style="position:absolute">Current Active Dengue Cases: <span id="stats_1"></span></a><br>
+						<a style="position:absolute">Max Active Dengue Cases: <span id="stats_2"></span></a><br>
+						<br/>
+						<a style="position:absolute">Total Mosquito Population: <span id="stats_3"></span></a><br>
+						<a style="position:absolute">Infected Mosquito Population: <span id="stats_4"></span></a><br>
+						<a style="position:absolute">Max Infected Mosquito Population: <span id="stats_5"></span></a><br>
+						<br/>
+						<a style="position:absolute">Current Time: <span id="stats_6"></span></a><br>
+					
+</div>
+
 			<!--</div>-->
 
 		</div>
@@ -91,12 +107,12 @@
 	<script type="text/javascript" src="lib/Dengue_Step4_Single_Zone.js"></script>
 
 		<!-- Add in Charts -->	
-		<div id="chart0" style="position:absolute; top:10%; left:63%; width:20%; height:40%;"></div>
-		<div id="chart1" style="position:absolute; top:35%; left:61%; width:20%; height:40%;"></div>
-		<div id="chart2" style="position:absolute; top:60%; left:63%; width:20%; height:40%;"></div>
-		<div id="chart3" style="position:absolute; top:10%; left:83%; width:20%; height:40%;"></div>
-		<div id="chart4" style="position:absolute; top:35%; left:81%; width:20%; height:40%;"></div>
-		<div id="chart5" style="position:absolute; top:60%; left:83%; width:20%; height:40%;"></div>
+		<!-- <div id="chart0" style="position:absolute; top:10%; left:63%; width:20%; height:40%;"></div> -->
+		<div id="chart1" style="position:absolute; top:0%; left:75%; width:20%; height:40%;"></div>
+		<!-- <div id="chart2" style="position:absolute; top:60%; left:63%; width:20%; height:40%;"></div> -->
+		<div id="chart3" style="position:absolute; top:30%; left:75%; width:20%; height:40%;"></div>
+		<div id="chart4" style="position:absolute; top:60%; left:75%; width:20%; height:40%;"></div>
+		<!-- <div id="chart5" style="position:absolute; top:60%; left:83%; width:20%; height:40%;"></div> -->
 		<script type="text/javascript" src="lib/PlotGraph.js"></script>
 
 </body>

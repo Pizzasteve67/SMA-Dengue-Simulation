@@ -1,13 +1,13 @@
 
-.colorMain { color: #FFE5B4; }
-.bgColor0 { background-color: #FFE5B4; }
+.colorMain { color: #FAEDCB; }
+.bgColor0 { background-color: #FAEDCB; }
 .bgColor1 { background-color: #B4FFE5; }
 .bgColor2 { background-color: #78D9B7; }
 .bgColor3 { background-color: #DAFFF2; }
 .bgColor4 { background-color: #E5B4FF; }
 .bgColor5 { background-color: #B778D9; }
 .bgColor6 { background-color: #66CC00; }
-.fontColor0 { color: #FFE5B4; }
+.fontColor0 { color: #FAEDCB; }
 .fontColor1 { color: #B4FFE5; }
 .fontColor2 { color: #78D9B7; }
 .fontColor3 { color: #DAFFF2; }
@@ -52,11 +52,24 @@
 	left:47%;
 	width:47%;
   height: 70%;
-  padding: 5px;
+  /*padding: 5px;*/
   /*border: 2px solid #000;*/
 }
 
 
+ul {
+	list-style-type: none;
+	padding:10px 5px 10px 15px;
+	margin:0;
+	border:3px solid #000;
+	width: 50%;
+	border-radius: 4px;
+	border-color: #28536B;
+}
+
+li {
+	padding:3px;
+}
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -102,4 +115,15 @@
 }
 .sidebar {
 	right: 10px;
+}
+
+#reset {
+	background-color: #28536B;
+  border: none;
+	color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+	border-radius: 4px;
 }

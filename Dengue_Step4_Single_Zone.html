@@ -44,15 +44,20 @@
 			-->
 			<!-- Overall Tab -->
 			<!--<div id="Overall" class="tabcontent">-->
-				<ol>
-					<li>
-						<a style="position:absolute">Simulation Speed: <span id="simspeed_val"></span></a><br>
-						<a><input id="simspeed" type="range" min="0" value="300" max="5000" step="10" onchange="redrawWindow();" style="position:absolute"/></a>
-					</li><br>
+
+				<ul> <u><i>Dengue Cases</i></u>
 					<li>
 						<a style="position:absolute">Human Density: <span id="humandensity_val"></span></a><br>
 						<a><input id="humandensity" type="range" min="0" value=humanDensity max="1" step=".01" onchange="redrawWindow();" style="position:absolute"/></a>
 					</li><br>
+					<li>
+						<a style="position:absolute">Cumulative Total Dengue Cases: <span id="stats_0"></span></a><br>
+						<a style="position:absolute">Current Active Dengue Cases: <span id="stats_1"></span></a><br>
+						<a style="position:absolute">Max Active Dengue Cases: <span id="stats_2"></span></a><br>
+					</li>
+				</ul>
+				<br>
+				<ul> <u><i>Interventions</i></u>
 					<li>
 						<a style="position:absolute">Biting Rate: <span id="bitingrate_val"></span></a><br>
 						<a><input id="bitingrate" type="range" min="0" value=BitingRate max="1" step=".01" onchange="redrawWindow();" style="position:absolute" /></a>
@@ -73,21 +78,26 @@
 						<a style="position:absolute">Spawn Rate: <span id="spawnrate_val"></span></a><br>
 						<a><input id="spawnrate" type="range" min="0" value=SpawnRate max="1" step=".01" onchange="redrawWindow();" style="position:absolute" /></a>
 					</li><br>
-				</ol>
-
-				<br/><br/><br/>
-				<div>
-						<a style="position:absolute">Cumulative Total Dengue Cases: <span id="stats_0"></span></a><br>
-						<a style="position:absolute">Current Active Dengue Cases: <span id="stats_1"></span></a><br>
-						<a style="position:absolute">Max Active Dengue Cases: <span id="stats_2"></span></a><br>
-						<br/>
+					<li>
 						<a style="position:absolute">Total Mosquito Population: <span id="stats_3"></span></a><br>
 						<a style="position:absolute">Infected Mosquito Population: <span id="stats_4"></span></a><br>
 						<a style="position:absolute">Max Infected Mosquito Population: <span id="stats_5"></span></a><br>
-						<br/>
+					</li>
+				</ul>
+				<br/>
+				<ul>
+					<li>
+						<a style="position:absolute">Simulation Speed: <span id="simspeed_val"></span></a><br>
+						<a><input id="simspeed" type="range" min="0" value="300" max="5000" step="10" onchange="redrawWindow();" style="position:absolute"/></a><br>
 						<a style="position:absolute">Current Time: <span id="stats_6"></span></a><br>
-					
+						<br>
+						<button id= "reset" onclick="redrawWindow()">Reset</button>
+					</li>
+				</ul>
+				<br>
+
 </div>
+
 
 			<!--</div>-->
 
@@ -106,7 +116,7 @@
 
 	<script type="text/javascript" src="lib/Dengue_Step4_Single_Zone.js"></script>
 
-		<!-- Add in Charts -->	
+		<!-- Add in Charts -->
 		<!-- <div id="chart0" style="position:absolute; top:10%; left:63%; width:20%; height:40%;"></div> -->
 		<div id="chart1" style="position:absolute; top:0%; left:75%; width:20%; height:40%;"></div>
 		<!-- <div id="chart2" style="position:absolute; top:60%; left:63%; width:20%; height:40%;"></div> -->

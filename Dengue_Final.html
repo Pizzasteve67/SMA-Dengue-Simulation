@@ -78,6 +78,12 @@
 						<a style="position:absolute">Spawn Rate: <span id="spawnrate_val"></span></a><br>
 						<a><input id="spawnrate" type="range" min="0" value=SpawnRate max="1" step=".01" onchange="redrawWindow();" style="position:absolute" /></a>
 					</li><br>
+					<button id= "reset" onclick="setdefault()">Default</button>
+					<button id= "reset" onclick="setwater()">Mozzie Wipeout</button>
+					<button id= "reset" onclick="setspawn()">Wolbachia Males</button>
+					<button id= "reset" onclick="settrap()">GraviTraps</button>
+					<button id= "reset" onclick="sethuman()">Circuit Breaker</button>
+					
 					<li>
 						<a style="position:absolute">Total Mosquito Population: <span id="stats_3"></span></a><br>
 						<a style="position:absolute">Infected Mosquito Population: <span id="stats_4"></span></a><br>
@@ -92,6 +98,7 @@
 						<a style="position:absolute">Current Time: <span id="stats_6"></span></a><br>
 						<br>
 						<button id= "reset" onclick="redrawWindow()">Reset</button>
+
 					</li>
 				</ul>
 				<br>

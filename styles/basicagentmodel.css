@@ -127,3 +127,14 @@ li {
   display: inline-block;
 	border-radius: 4px;
 }
+
+#setpara {
+	background-color: #28536B;
+  border: none;
+	color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+	border-radius: 4px;
+}

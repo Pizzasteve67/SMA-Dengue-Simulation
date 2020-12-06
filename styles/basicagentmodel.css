@@ -1,81 +1,118 @@
+.colorMain {
+  color: #faedcb;
+}
+.bgColor0 {
+  background-color: #faedcb;
+}
+.bgColor1 {
+  background-color: #b4ffe5;
+}
+.bgColor2 {
+  background-color: #78d9b7;
+}
+.bgColor3 {
+  background-color: #dafff2;
+}
+.bgColor4 {
+  background-color: #e5b4ff;
+}
+.bgColor5 {
+  background-color: #b778d9;
+}
+.bgColor6 {
+  background-color: #66cc00;
+}
+.fontColor0 {
+  color: #faedcb;
+}
+.fontColor1 {
+  color: #b4ffe5;
+}
+.fontColor2 {
+  color: #78d9b7;
+}
+.fontColor3 {
+  color: #dafff2;
+}
+.fontColor4 {
+  color: #e5b4ff;
+}
+.fontColor5 {
+  color: #b778d9;
+}
+.fontColor6 {
+  color: #f2daff;
+}
 
-.colorMain { color: #FAEDCB; }
-.bgColor0 { background-color: #FAEDCB; }
-.bgColor1 { background-color: #B4FFE5; }
-.bgColor2 { background-color: #78D9B7; }
-.bgColor3 { background-color: #DAFFF2; }
-.bgColor4 { background-color: #E5B4FF; }
-.bgColor5 { background-color: #B778D9; }
-.bgColor6 { background-color: #66CC00; }
-.fontColor0 { color: #FAEDCB; }
-.fontColor1 { color: #B4FFE5; }
-.fontColor2 { color: #78D9B7; }
-.fontColor3 { color: #DAFFF2; }
-.fontColor4 { color: #E5B4FF; }
-.fontColor5 { color: #B778D9; }
-.fontColor6 { color: #F2DAFF; }
+.clicked-btn {
+  background: #000 !important;
+}
 
 /* This font is a nice web version of Arial Rounded MT Bold */
 @font-face {
-	font-family: '616';
-	src: url('../fonts/616/616.eot');
-	src: local('616'), url('../fonts/616/616.woff') format('woff'), url('../fonts/616/616.ttf') format('truetype');
+  font-family: "616";
+  src: url("../fonts/616/616.eot");
+  src: local("616"), url("../fonts/616/616.woff") format("woff"),
+    url("../fonts/616/616.ttf") format("truetype");
 }
 /* Note you may have to use font-family="'616'" in some contexts */
 /* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_6898">Text with this font applied</p> */
 .fontsforweb_fontid_6898 {
-	font-family: '616' !important;
+  font-family: "616" !important;
 }
 /* Font downloaded from FontsForWeb.com */
 @font-face {
-	font-family: 'thegirlnextdoor';
-	src: url('../fonts/thegirlnextdoor/thegirlnextdoor.eot');
-	src: local('thegirlnextdoor'), url('../fonts/thegirlnextdoor/thegirlnextdoor.woff') format('woff'), url('../fonts/thegirlnextdoor/thegirlnextdoor.ttf') format('truetype');
+  font-family: "thegirlnextdoor";
+  src: url("../fonts/thegirlnextdoor/thegirlnextdoor.eot");
+  src: local("thegirlnextdoor"),
+    url("../fonts/thegirlnextdoor/thegirlnextdoor.woff") format("woff"),
+    url("../fonts/thegirlnextdoor/thegirlnextdoor.ttf") format("truetype");
 }
 /* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_7356">Text with this font applied</p> */
 .fontsforweb_fontid_7356 {
-	font-family: 'thegirlnextdoor' !important;
+  font-family: "thegirlnextdoor" !important;
 }
 /* Font downloaded from FontsForWeb.com */
 
 /* Set default font to be 616. Use 'thegirlnextdoor' for tooltips and suggestions.*/
-.official{
-	font-family:'616';
-	padding: 10px;
+.official {
+  font-family: "616";
+  padding: 10px;
 }
-.unofficial{font-family:'thegirlnextdoor';}
+.unofficial {
+  font-family: "thegirlnextdoor";
+}
 
 .placeholder-box {
   position: absolute;
-	/*background-color: #D3D3D3;*/
-	top:10%;
-	left:47%;
-	width:47%;
+  /*background-color: #D3D3D3;*/
+  top: 10%;
+  left: 47%;
+  width: 47%;
   height: 70%;
   /*padding: 5px;*/
   /*border: 2px solid #000;*/
 }
 
-
 ul {
-	list-style-type: none;
-	padding:10px 5px 10px 15px;
-	margin:0;
-	border:3px solid #000;
-	width: 50%;
-	border-radius: 4px;
-	border-color: #28536B;
+  list-style-type: none;
+  padding: 10px 5px 10px 15px;
+  margin: 0;
+  border: 3px solid #000;
+  width: 50%;
+  border-radius: 4px;
+  border-color: #28536b;
 }
 
 li {
-	padding:3px;
+  padding: 3px;
 }
 /* Style the tab */
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
-	right:10px;
+  right: 10px;
 }
 
 /* Style the buttons inside the tab */
@@ -88,7 +125,7 @@ li {
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 17px;
-	font-weight: bold;
+  font-weight: bold;
 }
 
 /* Change background color of buttons on hover */
@@ -105,36 +142,36 @@ li {
 .tabcontent {
   display: none;
   padding: 6px 12px;
-	height: 100%;
+  height: 100%;
   border: 1px solid #ccc;
   border-top: none;
 }
 
 .tabcontent li {
-	padding:5px;
+  padding: 5px;
 }
 .sidebar {
-	right: 10px;
+  right: 10px;
 }
 
-#reset {
-	background-color: #28536B;
+.reset {
+  background-color: #28536b;
   border: none;
-	color: white;
+  color: white;
   padding: 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-	border-radius: 4px;
+  border-radius: 4px;
 }
 
 #setpara {
-	background-color: #28536B;
+  background-color: #28536b;
   border: none;
-	color: white;
+  color: white;
   padding: 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-	border-radius: 4px;
+  border-radius: 4px;
 }

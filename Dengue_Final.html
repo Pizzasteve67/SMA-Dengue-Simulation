@@ -18,7 +18,7 @@
 		<!-- custom styles for this application -->
 		<link rel="stylesheet" href="styles/basicagentmodel.css" media="screen">
 
-		
+
 
 </head>
 <!-- Set class to official for more formal font; unofficial for informal font -->
@@ -85,7 +85,7 @@
 					<button id="set-spawn-btn" class= "reset" onclick="setspawn()">Wolbachia Males</button>
 					<button id="set-trap-btn" class= "reset" onclick="settrap()">GraviTraps</button>
 					<button id="set-human-btn" class= "reset" onclick="sethuman()">Circuit Breaker</button>
-					
+					<button id="instructions-btn" class= "reset" onclick="instructions()">Instructions</button>
 					<li>
 						<a style="position:absolute">Total Mosquito Population: <span id="stats_3"></span></a><br>
 						<a style="position:absolute">Infected Mosquito Population: <span id="stats_4"></span></a><br>
@@ -99,7 +99,7 @@
 						<a><input id="simspeed" type="range" min="0" value="300" max="5000" step="10" onchange="redrawWindow();" style="position:absolute"/></a><br>
 						<a style="position:absolute">Current Time: <span id="stats_6"></span></a><br>
 						<br>
-						<button id= "reset" onclick="redrawWindow()">Reset</button>
+						<button id= "reset" class= "reset" onclick="redrawWindow()">Reset</button>
 
 					</li>
 				</ul>

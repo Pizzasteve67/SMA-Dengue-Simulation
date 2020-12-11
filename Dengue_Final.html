@@ -85,7 +85,7 @@
 					<button id="set-spawn-btn" class= "reset" onclick="setspawn()">Wolbachia Males</button>
 					<button id="set-trap-btn" class= "reset" onclick="settrap()">GraviTraps</button>
 					<button id="set-human-btn" class= "reset" onclick="sethuman()">Circuit Breaker</button>
-					<button id="instructions-btn" class= "reset" onclick="instructions()">Instructions</button>
+					<button id="instructions-btn" class= "reset  instructions" onclick="instructions()">Instructions</button>
 					<li>
 						<a style="position:absolute">Total Mosquito Population: <span id="stats_3"></span></a><br>
 						<a style="position:absolute">Infected Mosquito Population: <span id="stats_4"></span></a><br>
@@ -133,6 +133,16 @@
 		<div id="chart4" style="position:absolute; top:60%; left:75%; width:20%; height:40%;"></div>
 		<!-- <div id="chart5" style="position:absolute; top:60%; left:83%; width:20%; height:40%;"></div> -->
 		<script type="text/javascript" src="lib/PlotGraph.js"></script>
+
+		<div id="overlay_bg"></div>
+		<div id="overlay_popup">
+			<h1>Welcome to our Dengue Simulation!</h1>
+			<p>&#2022 Government Intervention buttons can be toggled to simulate the effect of policies used by the SG government to control the number of dengue cases (more than 1 can be toggled concurrently).</p><br/>
+			<p>&#2022 Parameter control sliders can be used to further fine tune the parameters or custom set to explore the impact of potential measures not implemented yet by the SG government</p>
+			<br/>
+			<center><button id="close_lightbox_btn">Close</button></center>
+			
+		</div>
 
 </body>
 </html>
